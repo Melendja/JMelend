@@ -5,7 +5,7 @@
     </header>
     <main>
         <h2>Welcome to My Webpage</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/US_Department_of_Veterans_Affairs_vertical_logo.svg" alt="Veterans Affairs Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/US_Department_of_Veterans_Affairs_vertical_logo.svg" alt="Veteran Logo">
         <div class="course-info">
             <p>Currently attending: <strong>Web Systems I_521F_FA25_ON</strong> at Daytona State College.</p>
             <p>Visit the course page: <a href="https://class.daytonastate.edu/d2l/home" target="_blank">Daytona State College</a></p>
