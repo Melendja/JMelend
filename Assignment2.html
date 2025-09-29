@@ -5,40 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal portfolio website for COP4813 Web Systems I, showcasing assignments and web development skills.">
     <meta name="keywords" content="web development, portfolio, COP4813, assignments, resume">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Jose Melendez">
     <title>Jose Melendez - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: #1d4ed8;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > button {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu > li > button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+            margin-top: 0.5rem;
+            list-style: none;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .nav-menu > li:hover .submenu,
+        .nav-menu > li.active .submenu {
+            display: block;
+        }
+
+        .submenu li button {
+            width: 100%;
+            background: white;
+            color: #333;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .submenu li button:hover {
+            background: #f0f0f0;
+            color: #2563eb;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2563eb;
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        img {
+            display: block;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                width: 100%;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu > li {
+                width: 100%;
+            }
+
+            .nav-menu > li > button {
+                width: 100%;
+            }
+
+            .submenu {
+                position: static;
+                box-shadow: none;
+                margin-top: 0.5rem;
+                border-left: 3px solid #2563eb;
+            }
+
+            section {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="menu-toggle">☰ Menu</div>
+            <button class="menu-toggle">☰ Menu</button>
             <ul class="nav-menu">
                 <li>
-                    <a href="#classes">My Classes</a>
+                    <button>My Classes</button>
                     <ul class="submenu">
-                        <li><a href="https://class.daytonastate.edu/d2l/home/487729" target="_blank">Web Systems I</a></li>
-                        <li><a href="https://class.daytonastate.edu/d2l/home/485745" target="_blank">Applied Database I</a></li>
+                        <li><button onclick="window.open('https://class.daytonastate.edu/d2l/home/487729', '_blank')">Web Systems I</button></li>
+                        <li><button onclick="window.open('https://class.daytonastate.edu/d2l/home/485745', '_blank')">Applied Database I</button></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#assignments">My Assignments</a>
+                    <button>My Assignments</button>
                     <ul class="submenu">
-                        <li><a href="https://class.daytonastate.edu/d2l/lms/dropbox/user/folder_submit_files.d2l?db=1405223&grpid=0&isprv=0&bp=0&ou=487729" target="_blank">Assignment 1</a></li>
-                        <li><a href="https://class.daytonastate.edu/d2l/lms/dropbox/user/folder_submit_files.d2l?db=1405224&grpid=0&isprv=0&bp=0&ou=487729" target="_blank">Assignment 2</a></li>
+                        <li><button onclick="window.open('https://class.daytonastate.edu/d2l/lms/dropbox/user/folder_submit_files.d2l?db=1405223&grpid=0&isprv=0&bp=0&ou=487729', '_blank')">Assignment 1</button></li>
+                        <li><button onclick="window.open('https://class.daytonastate.edu/d2l/lms/dropbox/user/folder_submit_files.d2l?db=1405224&grpid=0&isprv=0&bp=0&ou=487729', '_blank')">Assignment 2</button></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#favorite-sites">My Favorite Sites</a>
+                    <button>My Favorite Sites</button>
                     <ul class="submenu">
-                        <li><a href="https://www.windy.com/-Weather-radar-radar?radar,27.887,-82.512,5" target="_blank">Windy.com</a></li>
-                        <li><a href="https://flightaware.com/live/" target="_blank">FlightAware</a></li>
+                        <li><button onclick="window.open('https://www.windy.com/-Weather-radar-radar?radar,27.887,-82.512,5', '_blank')">Windy.com</button></li>
+                        <li><button onclick="window.open('https://flightaware.com/live/', '_blank')">FlightAware</button></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#programming-sites">Programming Sites</a>
+                    <button>Programming Sites</button>
                     <ul class="submenu">
-                        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                        <li><button onclick="window.open('https://www.w3schools.com', '_blank')">W3Schools</button></li>
                     </ul>
                 </li>
             </ul>
@@ -59,6 +267,15 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Toggle submenu on mobile
+        document.querySelectorAll('.nav-menu > li > button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.currentTarget.parentElement.classList.toggle('active');
+                }
+            });
         });
     </script>
 </body>
