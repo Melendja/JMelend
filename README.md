@@ -11,10 +11,10 @@
         <div class="course-info">
             <p>Currently attending: <strong>Web Systems I_521F_FA25_ON</strong> at Daytona State College.</p>
             <p>Visit the course page: <a href="https://class.daytonastate.edu/d2l/home" target="_blank">Daytona State College</a></p>
-            <p>ASSIGNMENTS: <a href="Assignment2.html" target="_blank">Assignment Number 2</a></p>
-            <p>ASSIGNMENTS: <a href="https://melendja.github.io/contact-form" target="_blank">Assignment Number 3</a></p>
-            <p>ASSIGNMENTS: <a href="https://melendja.github.io/Damped_Harmonic_Oscillator_-Calculator/remixed-d092781a.html" target="_blank">Assignment Number 4</a></p>
-            <p>ASSIGNMENTS: <a href="https://melendja.github.io/Canvas/spirograph_canvas.html" target="_blank">Assignment Number 5</a></p>
+            <p>ASSIGNMENT: <a href="Assignment2.html" target="_blank">Assignment Number 2</a></p>
+            <p>ASSIGNMENT: <a href="https://melendja.github.io/contact-form" target="_blank">Assignment Number 3</a></p>
+            <p>ASSIGNMENT: <a href="https://melendja.github.io/Damped_Harmonic_Oscillator_-Calculator/remixed-d092781a.html" target="_blank">Assignment Number 4</a></p>
+            <p>ASSIGNMENT: <a href="https://melendja.github.io/Canvas/spirograph_canvas.html" target="_blank">Assignment Number 5</a></p>
 
 
             
