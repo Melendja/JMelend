@@ -15,6 +15,7 @@
             <p>ASSIGNMENT: <a href="https://melendja.github.io/contact-form" target="_blank">Assignment Number 3</a></p>
             <p>ASSIGNMENT: <a href="https://melendja.github.io/Damped_Harmonic_Oscillator_-Calculator/remixed-d092781a.html" target="_blank">Assignment Number 4</a></p>
             <p>ASSIGNMENT: <a href="https://melendja.github.io/Canvas/spirograph_canvas.html" target="_blank">Assignment Number 5</a></p>
+            <p>ASSIGNMENT: <a href="https://melendja.github.io/NFL_Dashboard/NFL_Dashboard.html" target="_blank">Assignment Number 6</a></p>
 
 
             
